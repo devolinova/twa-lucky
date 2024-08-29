@@ -4,10 +4,11 @@ import { Counter } from "./components/Counter";
 import { Jetton } from "./components/Jetton";
 import { TransferTon } from "./components/TransferTon";
 import styled from "styled-components";
-import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
+import { Card, Button, FlexBoxCol, FlexBoxRow, Ellipsis } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
+import WebApp from "@twa-dev/sdk";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -40,12 +41,21 @@ function App() {
                 ? network === CHAIN.MAINNET
                   ? "mainnet"
                   : "testnet"
-                : "N/A"}
+                : "mainnet/testnet (Connect to see)"}
             </Button>
           </FlexBoxRow>
           <Counter />
           <TransferTon />
           <Jetton />
+          <div className="Container">
+          <Card>
+        <FlexBoxCol>
+        <div>
+              {WebApp.initData}
+            </div>
+        </FlexBoxCol>
+      </Card>
+          </div>
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>
