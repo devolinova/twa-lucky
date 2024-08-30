@@ -3,3 +3,10 @@
   --tg-theme-button-color: #2eaddc;
   --tg-theme-button-text-color: white;
 }
+.user-photo {
+  width: 100px;  /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the image rounded */
+  object-fit: cover; /* Ensures the image covers the entire element without distortion */
+  border: 2px solid #ccc; /* Optional: Adds a border around the image */
+}

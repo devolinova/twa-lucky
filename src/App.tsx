@@ -43,6 +43,7 @@ function App() {
                   : "testnet"
                 : "mainnet/testnet (Connect to see)"}
             </Button>
+            <img class="user-photo" src={WebApp.initDataUnsafe.user?.photo_url} alt="User Photo"></img>
           </FlexBoxRow>
           <Counter />
           <TransferTon />
@@ -51,7 +52,7 @@ function App() {
           <Card>
         <FlexBoxCol>
         <div>
-              {WebApp.initData}
+              {WebApp.initDataUnsafe.user?.photo_url}
             </div>
         </FlexBoxCol>
       </Card>
