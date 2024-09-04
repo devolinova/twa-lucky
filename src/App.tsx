@@ -45,19 +45,20 @@ function App() {
             </Button>
             <span className="user-name">{WebApp.initDataUnsafe.user?.first_name} {WebApp.initDataUnsafe.user?.last_name}</span>
           </FlexBoxRow>
+          <div className="Container">
+          <Card>
+            <FlexBoxCol>
+            <div>
+                  <p>initData: {WebApp.initData}</p>
+            </div>
+            </FlexBoxCol>
+          </Card>
+          </div>
           <Counter />
           <TransferTon />
           <Jetton />
-          <div className="Container">
-          <Card>
-        <FlexBoxCol>
-        <div>
-              {WebApp.initDataUnsafe.user?.photo_url}
-            </div>
         </FlexBoxCol>
-      </Card>
-          </div>
-        </FlexBoxCol>
+        
       </AppContainer>
     </StyledApp>
   );
